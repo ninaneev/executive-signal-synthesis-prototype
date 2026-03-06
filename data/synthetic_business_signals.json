@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sig_001",
+    "source": "support_ticket",
+    "date": "2026-02-01",
+    "text": "Customer reports confusion during onboarding and unclear first report interpretation.",
+    "customer_stage": "active_customer",
+    "business_area": "onboarding"
+  },
+  {
+    "id": "sig_002",
+    "source": "sales_call_summary",
+    "date": "2026-02-02",
+    "text": "Prospect concerned about implementation effort and time to see value.",
+    "customer_stage": "prospect",
+    "business_area": "sales"
+  },
+  {
+    "id": "sig_003",
+    "source": "meeting_note",
+    "date": "2026-02-02",
+    "text": "Team discussed repeated onboarding delays affecting enterprise clients.",
+    "customer_stage": "internal",
+    "business_area": "operations"
+  },
+  {
+    "id": "sig_004",
+    "source": "customer_feedback",
+    "date": "2026-02-03",
+    "text": "Dashboard reports are hard to interpret and require manual explanation.",
+    "customer_stage": "active_customer",
+    "business_area": "product"
+  },
+  {
+    "id": "sig_005",
+    "source": "community_post",
+    "date": "2026-02-03",
+    "text": "Anyone else struggling to understand the onboarding steps?",
+    "customer_stage": "community",
+    "business_area": "onboarding"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "signal_types": [
+    "friction",
+    "risk",
+    "opportunity",
+    "request",
+    "complaint",
+    "praise",
+    "blocker"
+  ],
+  "business_areas": [
+    "sales",
+    "onboarding",
+    "product",
+    "support",
+    "operations",
+    "customer_success"
+  ],
+  "urgency_levels": ["low", "medium", "high"],
+  "impact_dimensions": [
+    "revenue_risk",
+    "churn_risk",
+    "operational_burden",
+    "strategic_opportunity"
+  ],
+  "confidence_levels": ["low", "medium", "high"]
+}
