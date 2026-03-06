@@ -1,10 +1,11 @@
-# placeholder
 import json
+from pathlib import Path
 import pandas as pd
 
 
 def load_signals(path="data/synthetic_business_signals.json"):
-    with open(path, "r", encoding="utf-8") as f:
+    file_path = Path(path)
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return pd.DataFrame(data)
 

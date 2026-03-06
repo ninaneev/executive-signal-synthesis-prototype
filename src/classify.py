@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def classify_signal(text):
     tags = {
         "signal_type": "friction",
@@ -8,13 +9,13 @@ def classify_signal(text):
         "possible_revenue_risk": False
     }
 
-    if "delay" in text or "confusion" in text:
+    if "delay" in text or "confusion" in text or "struggling" in text:
         tags["urgency"] = "high"
 
-    if "churn" in text or "cancel" in text:
+    if "churn" in text or "cancel" in text or "leave" in text:
         tags["possible_churn_risk"] = True
 
-    if "enterprise" in text:
+    if "enterprise" in text or "implementation" in text:
         tags["possible_revenue_risk"] = True
 
     return tags
