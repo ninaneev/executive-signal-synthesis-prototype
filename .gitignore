@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Word lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env
+.env
+.env.local

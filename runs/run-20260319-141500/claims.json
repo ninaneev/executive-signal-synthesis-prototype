@@ -1,0 +1,130 @@
+{
+  "run_id": "run-20260319-141500",
+  "agent": "synthesizer",
+  "date": "2026-03-19",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "section": "1. Problem",
+      "claim": "Organizations continuously generate large volumes of heterogeneous information from multiple operational sources. Despite this volume, information rarely reaches decision-makers in a structured, prioritized, or actionable form, creating a persistent gap between organizational signal production and executive decision capacity.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_002", "SENSE-1", "SENSE-2"],
+      "note": "Well-established problem in both IS/DSS literature (Daft & Lengel 1986) and org sensemaking (Weick 1995). No empirical quantification available from prototype — framing is conceptual."
+    },
+    {
+      "claim_id": "C02",
+      "section": "2. Why Current Systems Fail",
+      "claim": "Existing business intelligence tools (dashboards, search, summarization) address data retrieval and compression, not decision synthesis. They do not operate at the level of executive cognition — pattern recognition across heterogeneous sources, combined significance assessment, and prioritized decision framing.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_003", "DSS-3", "SENSE-2"],
+      "note": "Grounded in DSS literature evolution (Shim et al. 2002) and information richness theory (Daft & Lengel 1986). Claim is conceptual; prototype does not formally benchmark against existing BI tools."
+    },
+    {
+      "claim_id": "C03",
+      "section": "2. Why Current Systems Fail",
+      "claim": "The fundamental gap is not data access but the absence of a systematic methodology for transforming fragmented signals into structured intelligence — a missing intermediate layer between raw data processing and executive decision-making.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_003", "DSS-1"],
+      "note": "Directly supported by Gorry & Scott Morton (1971) framing of unstructured decision support. This is the core theoretical gap ESS addresses."
+    },
+    {
+      "claim_id": "C04",
+      "section": "3. Definition: Signals",
+      "claim": "A business signal is defined as any discrete, machine-readable unit of organizational information that carries implicit decision-relevant content. Signals are heterogeneous, partially observable, and lack a shared schema; their decision value is latent and emerges only through cross-signal interpretation.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_004", "SENSE-1", "SENSE-3"],
+      "note": "Definition is original to this framework. Grounded in Weick (1995) cue-based sensemaking and Klein et al. (2006) data-frame theory. Signals include: support tickets, sales notes, meeting notes, product usage data, community posts, operational reports."
+    },
+    {
+      "claim_id": "C05",
+      "section": "4. Definition: Synthesis",
+      "claim": "Signal synthesis is distinct from aggregation (counting/grouping) and summarization (compression of individual inputs). Synthesis involves: (1) recognizing cross-source patterns, (2) assessing their organizational significance, (3) producing a decision-relevant interpretation with explicit reasoning.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_005", "SYNTH-1", "SYNTH-3"],
+      "note": "The tripartite distinction (aggregation vs. summarization vs. synthesis) is a key conceptual contribution. Grounded in multi-source knowledge fusion literature (Zhao et al. 2020)."
+    },
+    {
+      "claim_id": "C06",
+      "section": "5. ESS Framework",
+      "claim": "Executive Signal Synthesis (ESS) is a four-stage methodological framework: (1) Ingestion — normalize heterogeneous signal sources into structured records; (2) Classification — assign type, domain, and impact weight; (3) Clustering — detect cross-source patterns; (4) Synthesis — generate decision-relevant interpretations and executive briefs.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual + prototype-validated",
+      "evidence": ["doc_001", "doc_006", "doc_009"],
+      "note": "Framework is fully instantiated in the prototype. Each stage has a direct code implementation. The framework is presented as a methodological research contribution, not a production specification."
+    },
+    {
+      "claim_id": "C07",
+      "section": "5. ESS Framework",
+      "claim": "ESS is designed to produce explainable, evidence-based outputs — outputs that trace from source signals through classification, clustering, and synthesis to final executive action recommendations — in alignment with explainability requirements for organizational AI.",
+      "confidence": "MEDIUM",
+      "claim_type": "conceptual",
+      "evidence": ["XAI-1", "XAI-3", "doc_006"],
+      "note": "The prototype produces interpretable TF-IDF/K-means clusters with source attribution. Full XAI compliance (per Arrieta et al. 2020) is aspirational at prototype stage; the current system is rule-based and interpretable but lacks formal explanation generation."
+    },
+    {
+      "claim_id": "C08",
+      "section": "6. Implementation Mapping",
+      "claim": "The ESS framework is fully instantiated in a Python prototype with direct stage-to-module mapping: Ingestion (src/ingest.py), Classification (src/classify.py), Clustering (src/cluster.py), Synthesis (src/synthesize.py), Brief Generation (src/generate_brief.py), Evaluation (src/evaluate.py). The pipeline is executable end-to-end via a single command: python run_pipeline.py.",
+      "confidence": "HIGH",
+      "claim_type": "prototype-validated",
+      "evidence": ["doc_009", "doc_015", "doc_019"],
+      "note": "Direct code evidence confirms all six modules exist and are functional. Pipeline executability is confirmed by run_pipeline.py."
+    },
+    {
+      "claim_id": "C09",
+      "section": "6. Implementation Mapping",
+      "claim": "The prototype demonstrated cross-source signal detection: processing 5 synthetic signals from 6 organizational source types (support ticket, sales call summary, meeting note, customer feedback, community post), producing 3 clusters of which 2 were cross-source (cross-source ratio: 0.67, compression ratio: 1.67x, high-urgency signals: 3).",
+      "confidence": "HIGH",
+      "claim_type": "prototype-validated",
+      "evidence": ["doc_017", "doc_018"],
+      "note": "These are actual measured metrics from evaluation_report.md and sample_decision_brief.md. Dataset is synthetic and small (n=5); results are exploratory not generalizable."
+    },
+    {
+      "claim_id": "C10",
+      "section": "7. Example Flow",
+      "claim": "The prototype successfully traced three heterogeneous signals — a sales call note (prospect concerned about implementation effort), a meeting note (onboarding delays affecting enterprise clients), and a support ticket (customer confusion during onboarding) — through classification, clustering, and synthesis to produce a cluster-level pattern and an executive action recommendation.",
+      "confidence": "HIGH",
+      "claim_type": "prototype-validated",
+      "evidence": ["doc_018"],
+      "note": "Directly supported by sample_decision_brief.md output. Pattern 1 and Pattern 2 in the brief demonstrate cross-source grouping. Example flow uses actual prototype output, not fabricated scenario."
+    },
+    {
+      "claim_id": "C11",
+      "section": "8. Implications",
+      "claim": "If signal synthesis becomes systematic and reproducible, it enables: (a) reduced cognitive load on leadership by pre-synthesizing distributed information; (b) earlier cross-functional risk detection; (c) explainable, traceable decision support that can be audited; (d) potential for continuous organizational intelligence rather than periodic reporting cycles.",
+      "confidence": "MEDIUM",
+      "claim_type": "conceptual",
+      "evidence": ["doc_006", "DSS-2", "XAI-1"],
+      "note": "Claims (a) and (b) are grounded in DSS/EIS literature (Leidner & Elam 1995). Claims (c) and (d) are forward-looking research implications — not demonstrated by prototype."
+    },
+    {
+      "claim_id": "C12",
+      "section": "9. Limitations",
+      "claim": "The current prototype has five explicit limitations: (1) synthetic dataset (n=5 signals) — results are not generalizable; (2) keyword-based classification — no semantic understanding, brittle to paraphrase; (3) TF-IDF + K-means clustering — lacks contextual embeddings, sensitive to vocabulary variation; (4) rule-based synthesis — no language model generation; (5) exploratory evaluation metrics only — no formal validation framework for decision quality.",
+      "confidence": "HIGH",
+      "claim_type": "prototype-validated",
+      "evidence": ["doc_007", "doc_010", "doc_012", "doc_013"],
+      "note": "All limitations are directly supported by code inspection. These are stated explicitly to maintain academic honesty and distinguish prototype validation from production claims."
+    },
+    {
+      "claim_id": "C13",
+      "section": "10. Future Work",
+      "claim": "Future research directions include: (1) semantic embeddings (e.g., sentence transformers) to replace TF-IDF for richer signal representation; (2) graph-based pattern detection for multi-hop relationship modeling; (3) formal evaluation metrics for decision quality assessment; (4) real-world organizational signal streams instead of synthetic datasets; (5) human-in-the-loop validation with executive stakeholders.",
+      "confidence": "HIGH",
+      "claim_type": "conceptual",
+      "evidence": ["doc_008", "XAI-1", "SYNTH-1"],
+      "note": "All five directions are grounded in identified prototype limitations and literature gaps. Graph-based detection is supported by multi-source knowledge fusion research (Zhao et al. 2020)."
+    }
+  ],
+  "synthesis_notes": {
+    "conceptual_vs_prototype": "Claims C01–C07 and C11–C13 are conceptual contributions grounded in literature. Claims C08–C10 are prototype-validated. This distinction must be clearly preserved in the paper.",
+    "overclaiming_risk": "C07 (XAI alignment) and C11 (implications) must be written with epistemic hedging — 'suggests', 'may enable', 'if validated at scale'. The prototype does not prove these implications.",
+    "key_original_contribution": "The primary conceptual contribution is the ESS framework definition (C06) and the tripartite synthesis distinction (C05). Secondary contribution is the prototype demonstrating feasibility (C08, C09).",
+    "missing_literature": "No business intelligence limitations paper (Negash 2004 or similar) was retrieved. DSS-3 (Shim et al. 2002) partially covers this gap."
+  }
+}
