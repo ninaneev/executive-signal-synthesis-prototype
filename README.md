@@ -4,11 +4,15 @@ This repository contains a limited research prototype accompanying the preprint:
 
 **Cressoni, N. (2026). _External AI Brain Systems for Executive Decision Support: A Conceptual Research Agenda for Founder-Led Organizations_. Preprint.**
 
+Preprint: `paper/executive_signal_synthesis_preprint.md`
+
 ## Research framing
 
 This repository supports the research direction of **External AI Brain Systems**: AI-based executive intelligence layers that ingest heterogeneous business signals, interpret them in context, synthesize them into decision-relevant patterns, and produce prioritized guidance for human leadership.
 
 The goal of this prototype is to test whether fragmented business signals can be transformed into structured executive decision support.
+
+This gap reflects a missing intermediate layer between raw data processing and executive decision-making.
 
 ## Relationship to Flowity AI
 
@@ -16,7 +20,7 @@ The academic contribution concerns the broader category of **External AI Brain S
 
 A prototype system aligned with this research direction is under development by the author through the startup **Flowity AI**.
 
-This repository is **not** the Flowity AI production system. It is a limited research validation artifact designed to demonstrate methodology, feasibility, and evaluation paths.
+This repository is **not** the Flowity AI production system. It is a limited research validation artifact proposed as a methodological research framework rather than a product specification, intended to demonstrate methodology, feasibility, and evaluation paths.
 
 ## What this repository includes
 
@@ -63,3 +67,12 @@ source .venv/bin/activate  # Linux/macOS
 # .venv\\Scripts\\activate   # Windows
 pip install -r requirements.txt
 python -m src.generate_brief
+```
+
+### Build the paper DOCX
+
+```bash
+./scripts/build_docx.sh \
+  paper/executive_signal_synthesis_preprint.md \
+  paper/build/ess_paper.docx
+```

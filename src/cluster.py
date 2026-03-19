@@ -2,7 +2,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
 
-def cluster_signals(df, n_clusters=3):
+def cluster_signals(df, n_clusters=4):
     vectorizer = TfidfVectorizer(stop_words="english")
     x = vectorizer.fit_transform(df["text"])
 
