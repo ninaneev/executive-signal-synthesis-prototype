@@ -1,5 +1,5 @@
 from src.generate_brief import generate_brief
-from src.evaluate import evaluate  # make sure function name matches
+from src.evaluate import evaluate
 
 
 def main() -> None:
