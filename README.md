@@ -193,3 +193,19 @@ To execute the current research prototype end-to-end:
 ```bash
 python run_pipeline.py
 ```
+
+## Evaluation
+
+The prototype includes a lightweight evaluation step to assess whether generated outputs reflect meaningful signal synthesis.
+
+Evaluation is currently exploratory and focuses on:
+
+- coherence of synthesized clusters
+- relevance of generated executive insights
+- alignment between signals and resulting decision framing
+
+The evaluation logic is implemented in:
+
+- `src/evaluate.py`
+
+This component is intentionally simple and serves as a placeholder for future research on formal evaluation metrics for signal synthesis systems.
