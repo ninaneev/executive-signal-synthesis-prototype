@@ -2,7 +2,7 @@
 
 This repository accompanies the research preprint:
 
-**From Signals to Decisions: A Framework for Executive Signal Synthesis in AI Systems**
+## **From Signals to Decisions: A Framework for Executive Signal Synthesis in AI Systems**
 
 **DOI:** https://doi.org/10.5281/zenodo.19120961
 **Author:** Nina Cressoni  
